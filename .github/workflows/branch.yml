@@ -10,21 +10,34 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name : Installing Java Maven
+      - name: Installing Java Maven
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin' # See 'Supported distributions' for available options
+          distribution: 'temurin'
           java-version: '11'
-          cache: 'maven' 
+          cache: 'maven'
 
-      - name: Installing Chrome 
+      - name: Installing Chrome
         uses: browser-actions/setup-chrome@v1
-        
-      - run: chrome --version
+
+      - name: Set Chrome and ChromeDriver paths
+        run: |
+          echo "CHROME_BIN=$(which google-chrome)" >> $GITHUB_ENV
+          echo "CHROMEDRIVER_PATH=$(which chromedriver)" >> $GITHUB_ENV
+
+      - name: Display Chrome version
+        run: google-chrome --version
+
+      - name: Display ChromeDriver version
+        run: chromedriver --version
+
+      - name: Set up Chrome options
+        run: echo "chromeOptions.binary=$CHROME_BIN" >> src/test/resources/testng.xml
+
       - run: mvn clean test
 
       - name: Upload test reports
-        if: always()  # Ensure reports are uploaded even if tests fail
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: Selenium-test-reports
