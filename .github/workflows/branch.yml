@@ -18,7 +18,7 @@ jobs:
           cache: 'maven' 
 
       - name: Installing Chrome 
-        uses: browser-actions/setup-chrome@v4
+        uses: browser-actions/setup-chrome@v1
         
       - run: chrome --version
       - run: mvn clean test
