@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-05T18:19:52 IST" name="Surefire suite" finished-at="2024-04-05T18:20:11 IST" duration-ms="19478">
+  <suite started-at="2024-04-07T11:09:57 IST" name="Surefire suite" finished-at="2024-04-07T11:10:26 IST" duration-ms="28816">
     <groups>
     </groups>
-    <test started-at="2024-04-05T18:19:52 IST" name="Surefire test" finished-at="2024-04-05T18:20:11 IST" duration-ms="19478">
+    <test started-at="2024-04-07T11:09:57 IST" name="Surefire test" finished-at="2024-04-07T11:10:26 IST" duration-ms="28816">
       <class name="test.AmazonTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.AmazonTest@5db45159]" started-at="2024-04-05T18:19:52 IST" name="setup" finished-at="2024-04-05T18:19:59 IST" duration-ms="7063" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.AmazonTest@5db45159]" started-at="2024-04-07T11:09:57 IST" name="setup" finished-at="2024-04-07T11:10:13 IST" duration-ms="16092" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="SearchAndClickFirstProduct()[pri:0, instance:test.AmazonTest@5db45159]" started-at="2024-04-05T18:19:59 IST" name="SearchAndClickFirstProduct" finished-at="2024-04-05T18:20:09 IST" duration-ms="10335" status="PASS">
+        <test-method signature="SearchAndClickFirstProduct()[pri:0, instance:test.AmazonTest@5db45159]" started-at="2024-04-07T11:10:13 IST" name="SearchAndClickFirstProduct" finished-at="2024-04-07T11:10:23 IST" duration-ms="9328" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchAndClickFirstProduct -->
-        <test-method signature="addToCart()[pri:1, instance:test.AmazonTest@5db45159]" started-at="2024-04-05T18:20:09 IST" name="addToCart" finished-at="2024-04-05T18:20:09 IST" duration-ms="120" status="PASS">
+        <test-method signature="addToCart()[pri:1, instance:test.AmazonTest@5db45159]" started-at="2024-04-07T11:10:23 IST" name="addToCart" finished-at="2024-04-07T11:10:23 IST" duration-ms="62" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCart -->
-        <test-method signature="proceedBuy()[pri:1, instance:test.AmazonTest@5db45159]" started-at="2024-04-05T18:20:09 IST" name="proceedBuy" finished-at="2024-04-05T18:20:11 IST" duration-ms="1890" status="PASS">
+        <test-method signature="proceedBuy()[pri:1, instance:test.AmazonTest@5db45159]" started-at="2024-04-07T11:10:23 IST" name="proceedBuy" finished-at="2024-04-07T11:10:26 IST" duration-ms="3298" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- proceedBuy -->
