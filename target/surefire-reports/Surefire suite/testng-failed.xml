@@ -5,8 +5,8 @@
     <classes>
       <class name="test.AmazonTest">
         <methods>
-          <include name="proceedBuy"/>
           <include name="SearchAndClickFirstProduct"/>
+          <include name="proceedBuy"/>
           <include name="setup"/>
           <include name="addToCart"/>
         </methods>

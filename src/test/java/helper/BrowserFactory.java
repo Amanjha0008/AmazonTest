@@ -12,7 +12,7 @@ public class BrowserFactory {
     public static WebDriver startBrowser(String browserName, String url) {
         switch (browserName.toLowerCase()) {
             case "chrome":
-                System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
+                System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--start-maximized");
                 driver = new ChromeDriver(chromeOptions);
