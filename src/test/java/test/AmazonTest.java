@@ -19,16 +19,30 @@ import java.util.logging.Logger;
 import static helper.BrowserFactory.driver;
 
 public class AmazonTest {
+    public static WebDriver driver;
+    public static ChromeOptions options;
+    public static WebDriverWait wait;
     private static final
     Logger logger = Logger.getLogger(BrowserFactory.class.getName());
 
     @BeforeTest
     public void setup() {
-        driver = BrowserFactory.startBrowser("chrome", "https://www.amazon.in/");
-        String page_title = driver.getTitle();
-        // Set the path to ChromeDriver executable
-        logger.info("Page Title:" + page_title);
+        options = new ChromeOptions();
+        //   options.addArguments("--remote-allow-origins=*");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--headless");
+        // System.setProperty("webdriver.chrome.driver", driverPath);
+        driver = new ChromeDriver(options);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        driver.manage().window().maximize();
+        driver.get("https://www.amazon.in/");
     }
+//        driver = BrowserFactory.startBrowser("chrome", "https://www.amazon.in/");
+//        String page_title = driver.getTitle();
+//        // Set the path to ChromeDriver executable
+//        logger.info("Page Title:" + page_title);
+
 
     @Test(priority = 0)
     public void SearchAndClickFirstProduct() {
