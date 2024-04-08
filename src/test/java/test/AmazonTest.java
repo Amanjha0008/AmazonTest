@@ -32,6 +32,7 @@ public class AmazonTest {
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--headless");
+        options.addArguments("--window-size=1920x1080");
         // System.setProperty("webdriver.chrome.driver", driverPath);
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
